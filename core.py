@@ -190,11 +190,21 @@ async def send_doc(bot: Client, m: Message,cc,ka,cc1,prog,count,name):
     os.remove(ka)
     time.sleep(3) 
 
+EMOJIS = ["🦁", "🐶", "🐼", "💥", "🐻‍❄️", "☁️", "🦋"]
+emoji_counter = 0  # Initialize a global counter
+
+def get_next_emoji():
+    global emoji_counter
+    emoji = EMOJIS[emoji_counter]
+    emoji_counter = (emoji_counter + 1) % len(EMOJIS)
+    return emoji
+
 async def send_vid(bot: Client, m: Message, cc, filename, thumb, name, prog):
     # Generate a thumbnail
+    emoji = get_next_emoji()
     subprocess.run(f'ffmpeg -i "{filename}" -ss 00:01:00 -vframes 1 "{filename}.jpg"', shell=True)
     await prog.delete(True)
-    reply = await m.reply_text(f"**📤 🅤︎Ⓟ︎🅛︎Ⓞ︎🅐︎Ⓓ︎🅘︎Ⓝ︎🅖︎....**\n\n **📦 🅣︎ɪᴛʟⒺ︎ =`{name}`**\n\n**╭━━━━━━━━━◆✯◆━━━━━━━━━╮**\n**⚡ MADE BY : ...🅧︎Ⓨ︎🅩... 🦁**\n**╰━━━━━━━━━◆✯◆━━━━━━━━━)
+    reply = await m.reply_text(f"**📤 🅤︎Ⓟ︎🅛︎Ⓞ︎🅐︎Ⓓ︎🅘︎Ⓝ︎🅖︎....**\n\n **📦 🅣︎ɪᴛʟⒺ︎ =`{name}`**\n\n**╭━━━━━━━━━◆✯◆━━━━━━━━━╮**\n**⚡ MADE BY : ...🅧︎Ⓨ︎🅩... 🦁**\n**╰━━━━━━━━━◆✯◆━━━━━━━━━╯**")
 
     try:
         if thumb == "no":
@@ -229,7 +239,7 @@ async def send_vid(bot: Client, m: Message, cc, filename, thumb, name, prog):
 async def send_vid(bot: Client, m: Message,cc,filename,thumb,name,prog):
     subprocess.run(f'ffmpeg -i "{filename}" -ss 00:01:00 -vframes 1 "{filename}.jpg"', shell=True)
     await prog.delete (True)
-    reply = await m.reply_text(f"**📤 🅤︎Ⓟ︎🅛︎Ⓞ︎🅐︎Ⓓ︎🅘︎Ⓝ︎🅖︎....**\n\n **📦 🅣︎ɪᴛʟⒺ︎ =`{name}`**\n\n**╭━━━━━━━━━◆✯◆━━━━━━━━━╮**\n**⚡ MADE BY : ...🅧︎Ⓨ︎🅩... 🦁**\n**╰━━━━━━━━━◆✯◆━━━━━━━━━)
+    reply = await m.reply_text(f"**📤 🅤︎Ⓟ︎🅛︎Ⓞ︎🅐︎Ⓓ︎🅘︎Ⓝ︎🅖︎....**\n\n **📦 🅣︎ɪᴛʟⒺ︎ =`{name}`**\n\n**╭━━━━━━━━━◆✯◆━━━━━━━━━╮**\n**⚡ MADE BY : ...🅧︎Ⓨ︎🅩... 🦁**\n**╰━━━━━━━━━◆✯◆━━━━━━━━━╯**")
     try:
         if thumb == "no":
             thumbnail = f"{filename}.jpg"
@@ -240,6 +250,7 @@ async def send_vid(bot: Client, m: Message,cc,filename,thumb,name,prog):
         await m.reply_text(str(e))
 
     dur = int(duration(filename))
+    processing_msg = await m.reply_text(emoji)
 
     start_time = time.time()
 
@@ -250,5 +261,6 @@ async def send_vid(bot: Client, m: Message,cc,filename,thumb,name,prog):
     os.remove(filename)
 
     os.remove(f"{filename}.jpg")
+    await processing_msg.delete(True)
     await reply.delete (True)
     
