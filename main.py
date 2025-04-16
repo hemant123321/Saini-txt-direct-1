@@ -32,11 +32,11 @@ photoyt = 'https://tinypic.host/images/2025/03/18/YouTube-Logo.wine.png'
 photocp = 'https://tinypic.host/images/2025/03/28/IMG_20250328_133126.jpg'
 
 async def show_random_emojis(message):
-    emojis = ['🐼', '🐶', '🐅', '⚡️', '🚀', '✨', '💥', '☠️', '🥂', '🍾']
+    emojis = ['🦁', '🐻', '✨', '🐼', '🌈', '🦁', '🐆', '🐈‍⬛', '🗿', '🔥', '⚡', '🕊️', '💥', '👻','🐅','🌟']
     emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
     return emoji_message
     
-credit ="𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎" 
+credit ="🤖 🅑︎Ⓞ︎🅣︎...☠️" 
 # Initialize the bot
 bot = Client(
     "bot",
@@ -51,22 +51,51 @@ import random
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📞 Contact", url="https://t.me/Nikhil_saini_khe"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+3k-1zcJxINYwNGZl"),
+            InlineKeyboardButton(text="📞 Contact", url="https://t.me/XYZOFFICALBOT"),
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/XYZOFFICALBOT"),
         ],
     ]
 )
 # Image URLs for the random image feature
 image_urls = [
-    "https://tinypic.host/images/2025/02/07/IMG_20250207_224444_975.jpg",
-    "https://tinypic.host/images/2025/02/07/DeWatermark.ai_1738952933236-1.png",
+    "https://i.ibb.co/Xrr7psWb/IMG-20250411-124617-491.jpg",
+    "https://i.ibb.co/bj9v73JS/IMG-20250411-124633-497.jpg",
+    "https://i.ibb.co/h1nj5Hyd/IMG-20250411-124644-073.jpg",
+    "https://i.ibb.co/67JChx68/IMG-20250411-124649-706.jpg",
+    "https://i.ibb.co/yc6PJt3z/IMG-20250411-124654-322.jpg",
+    "https://i.ibb.co/ks7Jh7jz/IMG-20250411-124658-596.jpg",
+    "https://i.ibb.co/FLXXjwFc/IMG-20250411-124702-194.jpg",
+    "https://i.ibb.co/DPw44rXD/IMG-20250411-124710-456.jpg",
+    "https://i.ibb.co/pvwZY9Tw/IMG-20250411-124717-700.jpg",
+    "https://i.ibb.co/8LBBQ9q8/IMG-20250411-124722-649.jpg",
+    "https://i.ibb.co/rKbh9YXy/IMG-20250411-124726-319.jpg",
+    "https://i.ibb.co/LDMGhcvS/IMG-20250411-124739-006.jpg",
+    "https://i.ibb.co/hRg4Vv2F/IMG-20250411-124753-057.jpg",
+    "https://i.ibb.co/r2mFQn4n/IMG-20250411-124756-483.jpg",
+    "https://i.ibb.co/VY7js3yz/IMG-20250411-125632-718.jpg",
+    "https://i.ibb.co/zWxBtgFt/IMG-20250411-125637-024.jpg",
+    "https://i.ibb.co/Pzwn1kbS/IMG-20250411-125640-439.jpg",
+    "https://i.ibb.co/Ps2T00D1/IMG-20250411-125725-177.jpg",
+    "https://i.ibb.co/YBS8y8bL/IMG-20250411-125729-949.jpg",
+    "https://i.ibb.co/NRsWK4B/IMG-20250411-125741-113.jpg",
+    "https://i.ibb.co/yn2p3HyG/IMG-20250411-125744-184.jpg",
+    "https://i.ibb.co/n8PtgGjV/IMG-20250411-125754-702.jpg",
+    "https://i.ibb.co/nNhjLd9s/IMG-20250411-125801-099.jpg",
+    "https://i.ibb.co/XxKJDzJS/IMG-20250411-125815-829.jpg",
+    "https://i.ibb.co/SwLJZBDj/IMG-20250411-125823-235.jpg",
+    "https://i.ibb.co/yndPHBNC/IMG-20250411-125826-345.jpg",
+    "https://i.ibb.co/TxC4V0CD/IMG-20250411-125844-807.jpg",
+    "https://i.ibb.co/Rk074wny/IMG-20250411-125858-873.jpg",
+    "https://i.ibb.co/B2b0yfwW/IMG-20250411-125901-589.jpg",
+    "https://i.ibb.co/C5smTsZd/IMG-20250411-125919-579.jpg",
+    "https://i.ibb.co/tpkmMfGw/IMG-20250411-130536-966.jpg",
     # Add more image URLs as needed
 ]
 cookies_file_path= "youtube_cookies.txt"
 @bot.on_message(filters.command(["help"]))
 async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
-        "🎉Congrats! You are using 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎:\n┣\n"
+        "🎉Congrats! You are using 🤖 🅑︎Ⓞ︎🅣︎...☠️:\n┣\n"
         "┣⪼01. Send /start - To Check Bot \n┣\n"
         "┣⪼02. Send /drm - for extract txt file\n┣\n"
         "┣⪼03. Send /cp - for stream txt file\n┣\n"
@@ -145,7 +174,7 @@ async def info(bot: Client, update: Message):
         disable_web_page_preview=True,
         reply_markup=BUTTONS
     )
-BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url=f"https://t.me/+-UUAslfhnugyZjZl")]])
+BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url=f"https://t.me/XYZOFFICALBOT")]])
 # /id Command - Show Group/Channel ID
 @bot.on_message(filters.command(["id"]))
 async def id_command(client, message: Message):
@@ -165,7 +194,7 @@ async def send_logs(bot: Client, m: Message):
 async def start_command(bot: Client, message: Message):
     random_image_url = random.choice(image_urls)
     caption = (
-        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎 🦁"
+        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : 🤖 🅑︎Ⓞ︎🅣︎...☠️"
     )
     await bot.send_photo(
         chat_id=message.chat.id,
@@ -248,7 +277,7 @@ async def txt_handler(bot: Client, m: Message):
     x = await input.download()
     await input.delete(True)
     file_name, ext = os.path.splitext(os.path.basename(x))
-    credit = f"𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎"
+    credit = f"🤖 🅑︎Ⓞ︎🅣︎...☠️"
     pdf_count = 0
     img_count = 0
     zip_count = 0
@@ -334,9 +363,9 @@ async def txt_handler(bot: Client, m: Message):
     raw_text3 = input3.text
     await input3.delete(True)
     # Default credit message
-    credit = "️𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎 🕊️⁪⁬⁮⁮⁮"
+    credit = "️🤖 🅑︎Ⓞ︎🅣︎...☠️⁪⁬⁮⁮⁮"
     if raw_text3 == '1':
-        CR = '𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎 🕊️'
+        CR = '🤖 🅑︎Ⓞ︎🅣︎...☠️'
     elif raw_text3:
         CR = raw_text3
     else:
