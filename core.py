@@ -194,7 +194,7 @@ async def send_vid(bot: Client, m: Message, cc, filename, thumb, name, prog):
     # Generate a thumbnail
     subprocess.run(f'ffmpeg -i "{filename}" -ss 00:01:00 -vframes 1 "{filename}.jpg"', shell=True)
     await prog.delete(True)
-    reply = await m.reply_text(f"**★彡 ᵘᵖˡᵒᵃᵈⁱⁿᵍ 彡★ ...⏳**\n\n📚𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎")
+    reply = await m.reply_text(f"**📤 🅤︎Ⓟ︎🅛︎Ⓞ︎🅐︎Ⓓ︎🅘︎Ⓝ︎🅖︎....**\n\n **📦 🅣︎ɪᴛʟⒺ︎ =`{name}`**\n\n**╭━━━━━━━━━◆✯◆━━━━━━━━━╮**\n**⚡ MADE BY : ...🅧︎Ⓨ︎🅩... 🦁**\n**╰━━━━━━━━━◆✯◆━━━━━━━━━)
 
     try:
         if thumb == "no":
@@ -206,7 +206,7 @@ async def send_vid(bot: Client, m: Message, cc, filename, thumb, name, prog):
 
     # Add watermark text overlay to the video with black color and 20% opacity
     watermarked_filename = f"watermarked_{filename}"
-    watermark_text = "SAINI BOTS"
+    watermark_text = "🅧︎Ⓨ︎🅩... 🦁"
     subprocess.run(
         f'ffmpeg -i "{filename}" -vf "drawtext=text=\'{watermark_text}\':fontcolor=black@0.2:fontsize=24:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy "{watermarked_filename}"', 
         shell=True
@@ -229,7 +229,7 @@ async def send_vid(bot: Client, m: Message, cc, filename, thumb, name, prog):
 async def send_vid(bot: Client, m: Message,cc,filename,thumb,name,prog):
     subprocess.run(f'ffmpeg -i "{filename}" -ss 00:01:00 -vframes 1 "{filename}.jpg"', shell=True)
     await prog.delete (True)
-    reply = await m.reply_text(f"**★彡 ᵘᵖˡᵒᵃᵈⁱⁿᵍ 彡★ ...⏳**\n\n📚𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎🦁")
+    reply = await m.reply_text(f"**📤 🅤︎Ⓟ︎🅛︎Ⓞ︎🅐︎Ⓓ︎🅘︎Ⓝ︎🅖︎....**\n\n **📦 🅣︎ɪᴛʟⒺ︎ =`{name}`**\n\n**╭━━━━━━━━━◆✯◆━━━━━━━━━╮**\n**⚡ MADE BY : ...🅧︎Ⓨ︎🅩... 🦁**\n**╰━━━━━━━━━◆✯◆━━━━━━━━━)
     try:
         if thumb == "no":
             thumbnail = f"{filename}.jpg"
